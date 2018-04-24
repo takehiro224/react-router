@@ -16,7 +16,7 @@ const TodoApp = ({store}) => {
                         );
                     })
                 }
-                </ul>
+            </ul>
         </div>
     );
 }

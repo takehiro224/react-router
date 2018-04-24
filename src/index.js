@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import { taskStore } from './stores/index';
+import { store } from './stores/index';
 import TodoApp from './components/TodoApp';
 
 
@@ -12,6 +12,6 @@ const render = (store) => {
     );
 }
 
-taskStore.subscribe(() => render(taskStore));
+store.subscribe(() => render(store));
 
-render(taskStore);
+render(store);

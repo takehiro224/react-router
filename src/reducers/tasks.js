@@ -8,7 +8,6 @@ const initialState = {
 export default function tasksReducer(state = initialState, action) {
     switch (action.type) {
         case INPUT_TASK:
-        console.log('1##########', state);
             return {
                 ...state,
                 task: action.payload.task
