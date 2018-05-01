@@ -1,18 +1,15 @@
 import React from 'react';
 
-import { inputTask, addTask } from '../actions/tasks';
-
-const TodoApp = ({store}) => {
-    const { task, tasks } = store.getState();
+const TodoApp = ({ task, tasks, inputTask, addTask, deleteTask }) => {
     return (
         <div>
-            <input type="text" onChange={(e) => store.dispatch(inputTask(e.target.value))} />
-            <input type="button" value="Add" onClick={() => store.dispatch(addTask(task))} />
+            <input type="text" value={task} onChange={(e) => inputTask(e.target.value)} />
+            <input type="button" value="Add" onClick={() => addTask(task)} />
             <ul>
                 {
                     tasks.map((item, i) => {
                         return (
-                            <li key={i}>{item}</li>
+                            <li key={i}>{item}<button onClick={() => deleteTask(i)}>delete</button></li>
                         );
                     })
                 }
