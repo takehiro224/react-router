@@ -1,3 +1,4 @@
+// reducer
 import { INPUT_TASK, ADD_TASK, DELETE_TASK } from '../actions/tasks';
 
 const initialState = {
